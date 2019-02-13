@@ -4,7 +4,7 @@ Unreal Engine 4 plugin for ZeroMQ with bindings from [zmqcpp](https://github.com
 ## Usage
 1. Copy this repository into the `Plugins` folder of your Unreal project.
 2. Verify that the plugin is enabled in the plugin menu inside the Unreal Editor.
-2. In your module's build file (`<your project name>.Build.cs`) add `ZeroMQ` the module dependency list:
+2. In your module's build file (`<your project name>.Build.cs`) add `ZeroMQ` to the module dependency list:
 ```c#
 ...
 PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "ZeroMQ" });
