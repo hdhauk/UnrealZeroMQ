@@ -35,7 +35,8 @@ public class ZeroMQ : ModuleRules
                 staticLibrary = Path.Combine(ZeroMQRootPath, "Windows", "x86", "libzmq-v141-mt-s-4_3_2.lib");
                 break;
             case UnrealTargetPlatform.Linux:
-                staticLibrary = Path.Combine(ZeroMQRootPath, "Linux", "libzmq.a");
+                staticLibrary = Path.Combine(ZeroMQRootPath, "Linux", "libzmq.so");
+                PublicAdditionalLibraries.Add("stdc++");
                 break;
             default:
                 Console.WriteLine("unsupported target platform: %s", Target.Platform);
@@ -43,11 +44,8 @@ public class ZeroMQ : ModuleRules
                 break;
         }
 
-        if (Target.Configuration == UnrealTargetConfiguration.Development)
-        {
-            bEnableExceptions = true;
-        }
-
+        bEnableExceptions = true;
+        
         Console.WriteLine("Using ZeroMQ static library: {0}", staticLibrary);
         PublicAdditionalLibraries.Add(staticLibrary);
     }
