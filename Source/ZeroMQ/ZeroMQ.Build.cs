@@ -38,6 +38,9 @@ public class ZeroMQ : ModuleRules
                 staticLibrary = Path.Combine(ZeroMQRootPath, "Linux", "libzmq.so");
                 PublicAdditionalLibraries.Add("stdc++");
                 break;
+            case UnrealTargetPlatform.Mac:
+                staticLibrary = Path.Combine(ZeroMQRootPath, "MacOS", "libzmq.a");
+                break;
             default:
                 Console.WriteLine("unsupported target platform: %s", Target.Platform);
                 Debug.Assert(false);
@@ -45,16 +48,16 @@ public class ZeroMQ : ModuleRules
         }
 
         bEnableExceptions = true;
-        
+
         Console.WriteLine("Using ZeroMQ static library: {0}", staticLibrary);
         PublicAdditionalLibraries.Add(staticLibrary);
     }
 
 
     public ZeroMQ(ReadOnlyTargetRules Target) : base(Target)
-	{
-		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-        PublicDependencyModuleNames.AddRange(new string[] {"Core"});
+    {
+        PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+        PublicDependencyModuleNames.AddRange(new string[] { "Core" });
         AddZeroMQ(Target);
 
     }
