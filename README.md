@@ -27,3 +27,4 @@ UE_LOG(LogTemp, Log, TEXT("ZeroMQ version: v%d.%d.%d), major, minor, patch);
 ## Support
 * Windows (x64 and x86)
 * Linux
+* MacOS
