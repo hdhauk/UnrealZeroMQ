@@ -284,7 +284,7 @@ ZMQ_EXPORT const char *zmq_msg_gets (const zmq_msg_t *msg_,
 /*  0MQ socket definition.                                                    */
 /******************************************************************************/
 
-/*  Socket types.                                                             */
+/*  Socket types.                                    2                         */
 #define ZMQ_PAIR 0
 #define ZMQ_PUB 1
 #define ZMQ_SUB 2
