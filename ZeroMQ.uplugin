@@ -4,7 +4,7 @@
 	"VersionName": "4.3.2",
 	"FriendlyName": "ZeroMQ",
 	"Description": "C++ bindings zmqcpp as a Unreal Engine 4 plugin. Usage: #include <zmq.hpp>",
-	"Category": "Other",
+	"Category": "Messaging",
 	"CreatedBy": "Halvor Haukvik",
 	"CreatedByURL": "github.com/hdhauk/UnrealZeroMQ",
 	"DocsURL": "",
