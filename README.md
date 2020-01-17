@@ -1,5 +1,5 @@
 # UnrealZeroMQ
-Unreal Engine 4 plugin for ZeroMQ with bindings from [zmqcpp](https://github.com/zeromq/cppzmq).
+Unreal Engine 4 plugin for ZeroMQ with bindings from [cppzmq](https://github.com/zeromq/cppzmq).
 
 ## Usage
 1. Copy this repository into the `Plugins` folder of your Unreal project.
