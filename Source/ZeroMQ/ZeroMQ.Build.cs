@@ -23,6 +23,10 @@ public class ZeroMQ : ModuleRules
         // add headers
         PublicIncludePaths.Add(Path.Combine(ZeroMQRootPath, "include"));
 		PrivateIncludePaths.Add(Path.Combine(ModuleDirectory,"Private"));
+
+        PrivatePCHHeaderFile = "Private/ZeroMQPrivatePCH.h";
+
+
         // tell library that it is statically linked
         PublicDefinitions.Add("ZMQ_STATIC");
 
