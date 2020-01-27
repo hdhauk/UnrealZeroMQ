@@ -18,12 +18,7 @@
 
 #pragma once
 
-#include "Core.h"
-#include "CoreUObject.h"
-#include "InputCore.h"
-#include "InputCoreTypes.h"
 #include "CoreMinimal.h"
-#include "CoreMisc.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include <zmq.hpp>
 
@@ -31,12 +26,12 @@
 
 
 UCLASS()
-class TPF_API UZeroMQBPFunctionLibrary : public UBlueprintFunctionLibrary
+class UZeroMQBPFunctionLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 
 
 	UFUNCTION(BlueprintCallable, Category = "ZeroMQ")
-		static FString GetVersion(void);
+		static FString GetVersion();
 
 };

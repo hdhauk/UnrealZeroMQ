@@ -12,20 +12,16 @@
   * Date: 	2020-01
   */
 
-
-// Implementation following
+// Blueprint Function Library, methods are expected to be static.
 // https://wiki.unrealengine.com/Blueprint_Function_Library,_Create_Your_Own_to_Share_With_Others
-//
-// Methods are expected to be static.
 
 #include "ZeroMQBPFunctionLibrary.h"
-#include "ZeroMQPrivatePCH.h" // that's how this methods become part of the plugin's module
+#include "ZeroMQPrivatePCH.h" // that's how this methods become part of the plugins module
 
 //////////////////////////////////////////////////////////////////////////
 // UZeroMQBPFunctionLibrary
 
-UFUNCTION(BlueprintCallable, Category = "ZeroMQ")
-FString UZeroMQBPFunctionLibrary::GetVersion(void)
+FString UZeroMQBPFunctionLibrary::GetVersion()
 {
 	int major, minor, patch;
 	zmq::version(&major, &minor, &patch);
